@@ -12,9 +12,15 @@ header("Location: login.php");
 <?php if ((isset($_SESSION['user_id']) )) { ?>
 
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+    
+    <center>
+    <img ref="img/sample1.png">
+    </center
+    
     <P>
     Click <a href="logout.php">here</a> to logout
     
+
     
 
  <?php } ?>
