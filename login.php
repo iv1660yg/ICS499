@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
 <div class="login-page">
   <div class="form">
   	<fieldset>
-	<legend>Employee Login</legend>	
+	<legend>User Login</legend>	
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="loginform">
       <input type="text" name="email" placeholder="email" required class="form-control" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
