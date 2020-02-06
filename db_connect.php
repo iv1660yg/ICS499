@@ -1,6 +1,6 @@
 <?php
 /* Database connection start */
-$servername = "127.0.0.1:52799";
+$servername = "127.0.0.1:52590";
 $username = "azure";
 $password = "6#vWHD_$";
 $dbname = "alphabuild";
