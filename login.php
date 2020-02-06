@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
 		$_SESSION['userType'] = $row['userType'];	
 		header("Location: index.php");
 	} else {
-		$error_message = "Incorrect Email or Password!!!";
+		$error_message = "Invalid Email or Password!!!";
 	}
 }
 ?>
@@ -35,7 +35,8 @@ if (isset($_POST['login'])) {
       <input type="text" name="email" placeholder="email" required class="form-control" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
       <button type="submit" name="login">login</button>
-      <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+	  <font align="center" size="3" color="red"><strong><?php echo "<BR>" .$error_message ?></strong></font>
+	  <?php /* <p >Not registered? <a href="register.php">Create an account</a></p> */ ?>
 	  </fieldset>
     </form>
   </div>
