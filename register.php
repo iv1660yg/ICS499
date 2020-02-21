@@ -43,6 +43,8 @@ if (isset($_POST['signup'])) {
 			$error_message = "Error in registering...Please try again later!";
 		}
 	}
+
+}
 ?>
 
 <head>
