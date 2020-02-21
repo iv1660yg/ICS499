@@ -53,7 +53,6 @@ if (isset($_POST['signup'])) {
 <div class="login-page">
   <div class="form">
   	<fieldset>
-	<legend>Register</legend>	
 	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="signupform">
 				<fieldset>
 					<legend>Sign Up</legend>
