@@ -67,7 +67,7 @@ if (isset($_POST['addmovie'])) {
 					</div>
 
 					<div class="form-group">
-						<label for="releasedate">Release Year</label>
+						<label for="releaseyear">Release Year</label>
 						<input input type="number" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
 					</div>
