@@ -16,21 +16,21 @@ if (isset($_POST['addmovie'])) {
 
 
 	
-	if (!preg_match("/[\s\S]/",$movie_title)) {
+	if (empty($movie_title)) {
 		$error = true;
 		$mtitle_error = "can't be empty";
 	}
-	if(!preg_match("\+?\d+",$releaseyear)) {
+	if(empty($releaseyear)) {
 		$error = true;
 		$releaseyear_error = "Please Enter Valid Year";
 	}
-	if(!preg_match("\+?\d+",$moviedb_id)) {
+	if(empty($moviedb_id)) {
 		$error = true;
 		$moviedb_id_error = "Password must be minimum of 6 characters";
 	}
-	if(!preg_match("/\+?\d+",$imdb_id)) {
+	if(empty($imdb_id)) {
 		$error = true;
-		$cpassword_error = "Password and Confirm Password doesn't match";
+		$imdb_id_error = "Password and Confirm Password doesn't match";
 	}
 	if (!$error) {
 		if(mysqli_query($conn, "INSERT INTO movies(movie_title, releaseyear,  moviedb_id, imdb_id) VALUES('" . $movie_title . "','" . $releaseyear . "','" . $moviedb_id . "', '" . $imdb_id . "')")) {
