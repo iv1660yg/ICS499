@@ -14,7 +14,11 @@ header("Location: login.php");
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
     
     <center>
-    <img src="img/sample1.png">
+                <h3>Menu</h3>
+                    <ul>
+                        <li>My Media</li>
+                        <li><a href="addmovie.php">Add New Movie</a></li>
+                    </ul>
     </center
     
     <P>
