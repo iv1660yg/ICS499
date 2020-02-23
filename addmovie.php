@@ -14,8 +14,7 @@ if (isset($_POST['addmovie'])) {
 	$moviedb_id = mysqli_real_escape_string($conn, $_POST['moviedb_id']);
 	$imdb_id_error = mysqli_real_escape_string($conn, $_POST['imdb_id']);
 
-
-	
+/*
 	if (empty($movie_title)) {
 		$error = true;
 		$mtitle_error = "can't be empty";
@@ -32,6 +31,7 @@ if (isset($_POST['addmovie'])) {
 		$error = true;
 		$imdb_id_error = "Password and Confirm Password doesn't match";
 	}
+	*/
 	if (!$error) {
 		if(mysqli_query($conn, "INSERT INTO movies(movie_title, releaseyear,  moviedb_id, imdb_id) VALUES('" . $movie_title . "','" . $releaseyear . "','" . $moviedb_id . "', '" . $imdb_id . "')")) {
 
