@@ -20,15 +20,15 @@ if (isset($_POST['addmovie'])) {
 		$error = true;
 		$uname_error = "can't be empty";
 	}
-	if(!preg_match("/[0-9]{4}/",$releaseyear)) {
+	if(!preg_match("\+?\d+",$releaseyear)) {
 		$error = true;
 		$email_error = "Please Enter Valid Year";
 	}
-	if(!preg_match("/[0-9]/",$moviedb_id)) {
+	if(!preg_match("\+?\d+",$moviedb_id)) {
 		$error = true;
 		$password_error = "Password must be minimum of 6 characters";
 	}
-	if(!preg_match("/[0-9]/",$imdb_id)) {
+	if(!preg_match("/\+?\d+",$imdb_id)) {
 		$error = true;
 		$cpassword_error = "Password and Confirm Password doesn't match";
 	}
