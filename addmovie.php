@@ -62,25 +62,25 @@ if (isset($_POST['addmovie'])) {
 
 					<div class="form-group">
 						<label for="movie_title">Movie Title</label>
-						<input type="text" name="movie_title" placeholder="Enter Movie Title" required value="<?php if($error) echo $firstname; ?>" class="form-control" />
+						<input type="text" name="movie_title" placeholder="Enter Movie Title" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
 					</div>
 
 					<div class="form-group">
 						<label for="releasedate">Release Year</label>
-						<input input type="number" min="1900" max="2099" step="1" value="2016" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
+						<input input type="number" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
 					</div>
 									
 					<div class="form-group">
 						<label for="moviedb_id">Moviedb ID</label>
-						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" required value="<?php if($error) echo $email; ?>" class="form-control" />
+						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($moviedb_id_error)) echo $moviedb_id_error; ?></span>
 					</div>
 
 					<div class="form-group">
 						<label for="imdb_id">IMDB ID</label>
-						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" required class="form-control" />
+						<input type="text" name="imb_id" placeholder="Enter IMDB ID" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
 					</div>
 
