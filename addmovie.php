@@ -12,21 +12,21 @@ if (isset($_POST['addmovie'])) {
 	$movie_title = mysqli_real_escape_string($conn, $_POST['movie_title']);
 	$releaseyear = mysqli_real_escape_string($conn, $_POST['releaseyear']);
 	$moviedb_id = mysqli_real_escape_string($conn, $_POST['moviedb_id']);
-	$imdb_id = mysqli_real_escape_string($conn, $_POST['imdb_id']);
+	$imdb_id_error = mysqli_real_escape_string($conn, $_POST['imdb_id']);
 
 
 	
 	if (!preg_match("/[\s\S]/",$movie_title)) {
 		$error = true;
-		$uname_error = "can't be empty";
+		$mtitle_error = "can't be empty";
 	}
 	if(!preg_match("\+?\d+",$releaseyear)) {
 		$error = true;
-		$email_error = "Please Enter Valid Year";
+		$releaseyear_error = "Please Enter Valid Year";
 	}
 	if(!preg_match("\+?\d+",$moviedb_id)) {
 		$error = true;
-		$password_error = "Password must be minimum of 6 characters";
+		$moviedb_id_error = "Password must be minimum of 6 characters";
 	}
 	if(!preg_match("/\+?\d+",$imdb_id)) {
 		$error = true;
