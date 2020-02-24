@@ -12,7 +12,7 @@ if (isset($_POST['addmovie'])) {
 	$movie_title = mysqli_real_escape_string($conn, $_POST['movie_title']);
 	$releaseyear = mysqli_real_escape_string($conn, $_POST['releaseyear']);
 	$moviedb_id = mysqli_real_escape_string($conn, $_POST['moviedb_id']);
-	$imdb_id_error = mysqli_real_escape_string($conn, $_POST['imdb_id']);
+	$imdb_id = mysqli_real_escape_string($conn, $_POST['imdb_id']);
 
 /*
 	if (empty($movie_title)) {
