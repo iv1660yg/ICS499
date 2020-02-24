@@ -49,7 +49,7 @@ mysqli_close($conn);
     </tr>
 		<tr>
 			<th>Movie Title</th>
-            <th>Movie Release Year</th>
+            <th>Release Year</th>
 		</tr>
 		<?php foreach ($json_de_id as $mymovies) : ?>
         <tr>
