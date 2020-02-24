@@ -6,7 +6,7 @@ include_once("db_connect.php");
 if (empty($_SESSION['user_id'])){
 header("Location: login.php");
 
-
+}
 $error = false;
 if (isset($_POST['addmovie'])) {
 	$movie_title = mysqli_real_escape_string($conn, $_POST['movie_title']);
@@ -46,7 +46,7 @@ if (isset($_POST['addmovie'])) {
 
 
 
-}
+
 ?>
 
 
