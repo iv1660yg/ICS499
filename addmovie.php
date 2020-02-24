@@ -35,7 +35,7 @@ if (isset($_POST['addmovie'])) {
 	if (!$error) {
 		if(mysqli_query($conn, "INSERT INTO movies(movie_title, releaseyear,  moviedb_id, imdb_id) VALUES('" . $movie_title . "','" . $releaseyear . "','" . $moviedb_id . "', '" . $imdb_id . "')")) {
 
-			mysqli_query ($conn,"SELECT movie_id from movies where movie_title = '" . $movie_title . "' ");
+			$movie_id = mysqli_query ($conn,"SELECT movie_id from movies where movie_title = '" . $movie_title . "' ");
 
 			mysqli_query($conn,"INSERT INTO user_movie(user_id, movie_id) VALUES('" . $_SESSION['user_id'] . "','" . $movie_id . "')");
 
