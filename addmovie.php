@@ -68,7 +68,7 @@ if (isset($_POST['addmovie'])) {
 
 					<div class="form-group">
 						<label for="releaseyear">Release Year</label>
-						<input input type="number" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
+						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
 					</div>
 									
@@ -80,7 +80,7 @@ if (isset($_POST['addmovie'])) {
 
 					<div class="form-group">
 						<label for="imdb_id">IMDB ID</label>
-						<input type="text" name="imb_id" placeholder="Enter IMDB ID" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
+						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
 					</div>
 
