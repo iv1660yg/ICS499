@@ -33,6 +33,9 @@ if (isset($_POST['addmovie'])) {
 	}
 	*/
 	if (!$error) {
+
+
+
 		if(mysqli_query($conn, "INSERT INTO movies(movie_title, releaseyear,  moviedb_id, imdb_id) VALUES('" . $movie_title . "','" . $releaseyear . "','" . $moviedb_id . "', '" . $imdb_id . "')")) {
 
 			$result = mysqli_query ($conn,"SELECT * from movies where movie_title = '" . $movie_title . "' ");
