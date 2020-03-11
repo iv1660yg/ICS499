@@ -30,6 +30,7 @@ align: center;
 
 .navimg {
 width: 210px;
+height: 210px;
 border: 9px solid #21b24c;
 }
 
@@ -41,6 +42,6 @@ width: 40px;
 padding-top: 20px;
 }
 
-.navlink a:link {
+.navlink a {
 color: #21b24c;
 }
