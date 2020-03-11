@@ -3,9 +3,41 @@ background-color: black;
 color: #21b24c;
 }
 
+a:link {
+color: blue;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
 input[type=text] {
 background-color: #21b24c;
 }
 
-p {
-text-color
+.nav {
+margin: auto;
+}
+
+.nav td {
+text-align: center;
+}
+
+.navcontent {
+align: center;
+}
+
+.navimg {
+cellpadding:100px
+border-color: #21b24c;
+border-width: 9px;
+}
+
+.navspacer {
+width: 200px;
+}
+
+.navlink {
+
+}
