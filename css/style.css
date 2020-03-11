@@ -29,13 +29,12 @@ align: center;
 }
 
 .navimg {
-cellpadding:100px
-border-color: #21b24c;
-border-width: 9px;
+cellpadding: 20px;
+border: 9px solid #21b24c;
 }
 
 .navspacer {
-width: 200px;
+width: 40px;
 }
 
 .navlink {
