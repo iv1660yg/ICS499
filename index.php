@@ -29,9 +29,9 @@ header("Location: login.php");
 <td class="navimg"><img src="img/add.png" /></td>
 </tr>
 <tr class="navcontent">
-<td class="navlink"><a href="addmovie.php">Add New Movie</a></td>
-<td class="navspacer"></td>
 <td class="navlink"><a href="mymovies.php">My Movies</a></td>
+<td class="navspacer"></td>
+<td class="navlink"><a href="addmovie.php">Add New Movie</a></td>
 </tr>
 
 </table>
