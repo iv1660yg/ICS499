@@ -14,6 +14,8 @@ text-decoration: underline;
 
 input[type=text] input[type=password] {
 background-color: white;
+padding-top: 2px;
+padding-bottom: 2px;
 }
 
 .nav {
