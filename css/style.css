@@ -3,6 +3,11 @@ background-color: black;
 color: #21b24c;
 }
 
+legend {
+font-size: 14pt;
+font-weight: bold;
+}
+
 a:link {
 color: blue;
 text-decoration: none;
