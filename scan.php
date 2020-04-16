@@ -20,6 +20,10 @@ header("Location: login.php");
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
     
 
+    <link rel="canonical" href="https://serratus.github.io/v1.0.0-beta.1/examples/scan-to-input/" />
+    <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/example.css">
+    <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/pygment_trac.css">
 
     <script>
         var host = "serratus.github.io";
@@ -45,13 +49,13 @@ header("Location: login.php");
 <section id="container" class="container">
     <h3>Scan barcode to input-field</h3>
     <p>Click the <strong>button</strong> next to the input-field
-        to start scanning an <strong>barcode</strong> </p>
+        to start scanning a <strong>barcode</strong> </p>
     <div>
         <form>
             <div class="input-field">
                 <label for="isbn_input">EAN:</label>
                 <input id="isbn_input" class="isbn" type="text" />
-                <button type="button" class="icon-barcode button scan">Scan</button>
+                <button type="button" class="icon-barcode button scan">&nbsp;</button>
             </div>
         </form>
     </div>
@@ -68,7 +72,6 @@ header("Location: login.php");
       </footer>
     </div>
   </body>
-
     
 <br /><br />
     <p align="center">
