@@ -13,6 +13,8 @@ header("Location: login.php");
 
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
