@@ -1,0 +1,54 @@
+body {
+background-color: black;
+color: #21b24c;
+}
+
+legend {
+font-size: 14pt;
+font-weight: bold;
+}
+
+a:link {
+color: blue;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+input[type=text] input[type=password] {
+background-color: white;
+margin-top: 3px;
+margin-bottom: 3px;
+}
+
+.nav {
+margin: auto;
+}
+
+.nav td {
+text-align: center;
+}
+
+.navcontent {
+align: center;
+}
+
+.navimg {
+width: 210px;
+height: 210px;
+border: 9px solid #21b24c;
+}
+
+.navspacer {
+width: 40px;
+}
+
+.navlink {
+padding-top: 20px;
+}
+
+.navlink a {
+color: #21b24c;
+}
