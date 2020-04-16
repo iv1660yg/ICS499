@@ -16,7 +16,8 @@ header("Location: login.php");
     <center>
                 <h3>Menu</h3>
                     <ul>
-                        <li><a href="managemedia.php">Manage Media</a></li>
+                        <li><a href="addmovie.php">Add New Movie</a></li>
+                        <li><a href="mymovies.php">My Movies</a></li>
                     </ul>
     </center
     
