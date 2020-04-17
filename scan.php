@@ -60,9 +60,9 @@ header("Location: login.php");
 </p>
 
 
-<script src="quagga.js" type="text/javascript"></script>
-<script src="index.js" type="text/javascript"></script>
-<script src="prism.js"></script>
+<script src="script/quagga.js" type="text/javascript"></script>
+<script src="script/index.js" type="text/javascript"></script>
+<script src="script/prism.js"></script>
     
 <br /><br />
     <p align="center">
