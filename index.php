@@ -17,8 +17,8 @@ header("Location: login.php");
 </head>
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
     
-    <table width=600px>
-    <th colspan=2><img src="img/menu.png" /></th>
+    <table width=600px style="margin-left:auto;margin-right:auto;">
+    <th colspan=3><img src="img/menu.png" /></th>
     <tr>
     <td><img src="img/lib1.png" /></td>
     <td><a href="managemedia.php"><img src="img/mm.png" /></a></td>
