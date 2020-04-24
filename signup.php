@@ -71,46 +71,55 @@ if (isset($_POST['signup'])) {
 				<fieldset>
 					<legend>Sign Up</legend>
 				<table>
-
-					<div class="form-group">
 					<tr> 
+					<div class="form-group">
+					
 						<td>
 						<label for="firstname">First Name</label>
 						</td>
 						<td><input type="text" name="firstname" placeholder="Enter First Name" required value="<?php if($error) echo $firstname; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($fname_error)) echo $fname_error; ?></span>
 						</td>
-					</tr>	
 					</div>
+					</tr>	
 
+					<tr>
 					<div class="form-group">
+						<td>
 						<label for="lastname">Last Name</label>
+						</td>
+						<td>
 						<input type="text" name="lastname" placeholder="Enter Last Name" required value="<?php if($error) echo $lastname; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($lname_error)) echo $lname_error; ?></span>
+						</td>
 					</div>
-				
-					
+					</tr>
+					<tr>
 					<div class="form-group">
 						<label for="email">Email</label>
 						<input type="text" name="email" placeholder="Enter Email" required value="<?php if($error) echo $email; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
 					</div>
-
+					</tr>
+					<tr>
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" name="password" placeholder="Enter Password" required class="form-control" />
 						<span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
 					</div>
-
+					</tr>
+					<tr>
 					<div class="form-group">
 						<label for="password">Confirm Password</label>
 						<input type="password" name="cpassword" placeholder="Confirm Password" required class="form-control" />
 						<span class="text-danger"><?php if (isset($cpassword_error)) echo $cpassword_error; ?></span>
 					</div>
-
+					</tr>
+					<tr>
 					<div class="form-group">
 						<input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
 					</div>
+					</tr>
 				</table>
 				</fieldset>
 			</form>
