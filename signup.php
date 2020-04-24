@@ -96,28 +96,42 @@ if (isset($_POST['signup'])) {
 					</tr>
 					<tr>
 					<div class="form-group">
+						<td>
 						<label for="email">Email</label>
+						</td>
+						<td>
 						<input type="text" name="email" placeholder="Enter Email" required value="<?php if($error) echo $email; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
+						</td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
+						<td>
 						<label for="password">Password</label>
+						</td>
+						<td>
 						<input type="password" name="password" placeholder="Enter Password" required class="form-control" />
 						<span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
+						</td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
+						<td>
 						<label for="password">Confirm Password</label>
+						</td>
+						<td>
 						<input type="password" name="cpassword" placeholder="Confirm Password" required class="form-control" />
 						<span class="text-danger"><?php if (isset($cpassword_error)) echo $cpassword_error; ?></span>
+						</td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
+						<td>
 						<input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
+						</td>
 					</div>
 					</tr>
 				</table>
