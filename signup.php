@@ -70,11 +70,17 @@ if (isset($_POST['signup'])) {
 	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="signupform">
 				<fieldset>
 					<legend>Sign Up</legend>
+				<table>
 
 					<div class="form-group">
+					<tr> 
+						<td>
 						<label for="firstname">First Name</label>
-						<input type="text" name="firstname" placeholder="Enter First Name" required value="<?php if($error) echo $firstname; ?>" class="form-control" />
+						</td>
+						<td><input type="text" name="firstname" placeholder="Enter First Name" required value="<?php if($error) echo $firstname; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($fname_error)) echo $fname_error; ?></span>
+						</td>
+					</tr>	
 					</div>
 
 					<div class="form-group">
@@ -105,6 +111,7 @@ if (isset($_POST['signup'])) {
 					<div class="form-group">
 						<input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
 					</div>
+				</table>
 				</fieldset>
 			</form>
   </div>
