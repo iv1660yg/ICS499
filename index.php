@@ -21,22 +21,13 @@ header("Location: login.php");
     <th><img src="img/menu.png" /></th>
     <tr>
     <td><img src="img/lib1.png" /></td>
-    <td><img src="img/mm.png" /></td>
+    <td><a href="managemedia.php"><img src="img/mm.png" /></a></td>
     <td><img src="img/add1.png" /></td>
 
     </tr>
 
 
     </table>
-
-
-    <center>
-                <h3>Menu</h3>
-                    <ul>
-                        <li><a href="managemedia.php">Manage Media</a></li>
-                    </ul>
-    </center
-
 
     
 <br /><br />
