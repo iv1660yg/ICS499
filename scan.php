@@ -1,3 +1,16 @@
+<?php 
+session_start();
+include('header.php');
+include_once("db_connect.php");
+
+if (empty($_SESSION['user_id'])){
+header("Location: login.php");
+}
+
+?>
+
+
+<?php if ((isset($_SESSION['user_id']) )) { ?>
 
 <!doctype html>
 <html>
@@ -37,12 +50,13 @@
     <p>Click the <strong>button</strong> next to the input-field
         to start scanning a <strong>barcode</strong> </p>
     <div>
-        <form>
+        <form action="addmovie.php" method="post">
             <div class="input-field">
                 <label for="isbn_input">EAN:</label>
-                <input id="isbn_input" class="isbn" type="text" />
+                <input id="isbn_input" name="isbn_input" class="isbn" type="text" />
                 <button type="button" class="icon-barcode button scan">&nbsp;</button>
             </div>
+            <input type="submit" name="search" value="Search" class="btn btn-primary" />
         </form>
     </div>
     </p>
@@ -59,3 +73,5 @@
     </div>
   </body>
 </html>
+
+<?php } ?>
