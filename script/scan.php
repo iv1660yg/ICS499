@@ -53,7 +53,7 @@ header("Location: login.php");
         <form action="processscan.php" method="post">
             <div class="input-field">
                 <label for="isbn_input">EAN:</label>
-                <input id="isbn_input" class="isbn" type="text" />
+                <input id="isbn_input" name="isbn_input" class="isbn" type="text" />
                 <button type="button" class="icon-barcode button scan">&nbsp;</button>
             </div>
             <input type="submit" name="search" value="Search" class="btn btn-primary" />
