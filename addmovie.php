@@ -22,7 +22,14 @@ if (!empty($_POST['isbn_input'])) {
     $json = file_get_contents($url);
     $json = json_decode($json);
     
-    $scantitle=$json->description;
+	$scantitle=$json->description;
+
+	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=$scantitle";
+
+    $jsondb = file_get_contents($movidburl);
+	$jsondb = json_decode($jsondb);
+	$moviedbid = $jsondb->results[0]->id;
+
     
 
 }
@@ -129,7 +136,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="moviedb_id">Moviedb ID</label>
 						</td>
 						<td>
-						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
+						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" value="<?php echo (isset($moviedbid))?$moviedbid:'';?>" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($moviedb_id_error)) echo $moviedb_id_error; ?></span>
 						</td>
 					</div>
