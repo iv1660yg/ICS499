@@ -22,7 +22,7 @@ if (!empty($_POST['isbn_input'])) {
     $json = file_get_contents($url);
     $json = json_decode($json);
     
-    $mplaceholder=$json->description;
+    $scantitle=$json->description;
     
 
 }
@@ -107,7 +107,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="movie_title">Movie Title</label>
 					<t/d>
 					<td>
-						<input type="text" name="movie_title" placeholder="<?php echo $mplaceholder; ?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
+						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($scantitle))?$scantitle:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>click <a href="scan.php">here</a> to scan barcode
 					</td>	
 					</div>
