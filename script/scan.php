@@ -50,7 +50,7 @@ header("Location: login.php");
     <p>Click the <strong>button</strong> next to the input-field
         to start scanning a <strong>barcode</strong> </p>
     <div>
-        <form action=https://api.upcdatabase.org/product/ ?apikey=67BDE043D668B6EE5508863B7441C873>
+        <form action="processfeedback.php" method="post">
             <div class="input-field">
                 <label for="isbn_input">EAN:</label>
                 <input id="isbn_input" class="isbn" type="text" />
