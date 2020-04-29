@@ -79,33 +79,59 @@ if (isset($_POST['addmovie'])) {
 				<fieldset>
 					<legend>Add Movie</legend>
 
+					<table>
+					<tr> 
 					<div class="form-group">
+					<td>
 						<label for="movie_title">Movie Title</label>
+					<t/d>
+					<td>
 						<input type="text" name="movie_title" placeholder="Enter Movie Title" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
+					</td>	
 					</div>
-
+					</tr>	
+					<tr> 
 					<div class="form-group">
+					<td>
 						<label for="releaseyear">Release Year</label>
+						</td>
+						<td>	
 						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
+						</td>
 					</div>
-									
+					</tr> 
+					<tr> 				
 					<div class="form-group">
+					<td>
 						<label for="moviedb_id">Moviedb ID</label>
+						</td>
+						<td>
 						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($moviedb_id_error)) echo $moviedb_id_error; ?></span>
+						</td>
 					</div>
-
+					</tr> 
+					<tr> 
 					<div class="form-group">
+					<td>
 						<label for="imdb_id">IMDB ID</label>
+						</td>
+						<td>
 						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
+						</td>
 					</div>
-
+					</tr> 
+					<tr> 
 					<div class="form-group">
+					<td>
 						<input type="submit" name="addmovie" value="Add Movie" class="btn btn-primary" />
+						</td>
 					</div>
+					</tr> 
+					</table>
 				</fieldset>
 			</form>
   </div>
