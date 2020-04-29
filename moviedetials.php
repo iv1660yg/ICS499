@@ -43,7 +43,7 @@ if (!empty($_GET['id'])) {
   </tr>
   <tr>
     <td>Movie Poster</td>
-    <td><img class="resize" src="https://image.tmdb.org/t/p/w500<?php echo $json->poster_path ?>.jpg"></td>
+    <td><img class="resize" src="https://image.tmdb.org/t/p/w500<?php echo $json->poster_path ?>"></td>
   </tr>
   <tr>
     <td>Cast</td>
