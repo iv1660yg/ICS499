@@ -28,12 +28,18 @@ if (!empty($_POST['isbn_input'])) {
 	$scantitle = $json->items[0]->title;
 	$scantitle =  trim($scantitle);
 
+	//getmoviedb
 	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=".rawurlencode($scantitle);
-	echo $movidburl;
-
     $jsondb = file_get_contents($movidburl);
 	$jsondb = json_decode($jsondb);
 	$moviedbid = $jsondb->results[0]->id;
+
+	$imdburl = "https://api.themoviedb.org/3/movie/".$moviedbid."?api_key=5a846dc3f5db35f3d5590b415612624c";
+	$jsonimdb = file_get_contents($imdburl);
+	$jsonimdb = json_decode($jsonimdb);
+	$imdbid = $jsondb->imdb_id;
+
+
 
     
 
@@ -152,7 +158,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="imdb_id">IMDB ID</label>
 						</td>
 						<td>
-						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
+						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" value="<?php echo (isset($imdbid))?$imdbid:'';?>" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
 						</td>
 					</div>
