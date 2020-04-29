@@ -28,7 +28,8 @@ if (!empty($_POST['isbn_input'])) {
 	$scantitle = $json->items[0]->title;
 	$scantitle =  trim($scantitle);
 
-	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=urlencode($scantitle)";
+	$newscantitle= urlencode($scantitle);
+	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=$newscantitle";
 
     $jsondb = file_get_contents($movidburl);
 	$jsondb = json_decode($jsondb);
