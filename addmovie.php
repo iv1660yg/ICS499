@@ -14,7 +14,9 @@ if (!empty($_POST['isbn_input'])) {
 
 
     //set upc api url
-    $url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
+   // $url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
+   $url = "https://api.upcitemdb.com/prod/trial/lookup?upc=$barcode";
+
     
     
     
@@ -22,7 +24,8 @@ if (!empty($_POST['isbn_input'])) {
     $json = file_get_contents($url);
     $json = json_decode($json);
     
-	$scantitle=$json->title;
+	//$scantitle=$json->title;
+	$scantitle = $json->items[0]->title;
 	$scantitle =  trim($scantitle);
 
 	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=$scantitle";
