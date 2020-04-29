@@ -56,7 +56,7 @@ mysqli_close($conn);
 		</tr>
 		<?php foreach ($json_de_id as $mymovies) : ?>
         <tr>
-            <td> <a href=moviedetials.php?id="<?php echo $$mymovies->moviedb_id; ?>"><?php echo $mymovies->movie_title; ?></a> </td>
+            <td> <a href=moviedetials.php?id="<?php echo $mymovies->moviedb_id; ?>"><?php echo $mymovies->movie_title; ?></a> </td>
             <td> <?php echo $mymovies->releaseyear; ?> </td>
         </tr>
 		<?php endforeach; ?>
