@@ -51,11 +51,11 @@ header("Location: login.php");
     <div>
         <form>
             <div class="input-field">
-                <label for="isbn_input">Barcode:</label>
+                <label for="isbn_input">EAN:</label>
                 <input id="isbn_input" class="isbn" type="text" />
                 <button type="button" class="icon-barcode button scan">&nbsp;</button>
-                <input type="submit" name="search" value="Search" class="btn btn-primary" />
             </div>
+            <input type="submit" name="search" value="Search" class="btn btn-primary" />
         </form>
     </div>
     </p>
