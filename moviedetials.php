@@ -18,10 +18,8 @@ if (!empty($_GET['id'])) {
     $json = json_decode($json);
     
     
-    
-    echo $jsondb->original_title;
-
-    echo $jsondb->overview;
+    echo $json->original_title;
+    echo $json->overview;
 }
 
 
