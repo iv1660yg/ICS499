@@ -37,7 +37,7 @@ if (!empty($_POST['isbn_input'])) {
 	$imdburl = "https://api.themoviedb.org/3/movie/".$moviedbid."?api_key=5a846dc3f5db35f3d5590b415612624c";
 	$jsonimdb = file_get_contents($imdburl);
 	$jsonimdb = json_decode($jsonimdb);
-	$imdbid = $jsondb->imdb_id;
+	$imdbid = $jsondb->results->imdb_id;
 
 
 
