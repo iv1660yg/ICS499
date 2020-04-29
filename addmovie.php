@@ -87,7 +87,7 @@ if (isset($_POST['addmovie'])) {
 					<t/d>
 					<td>
 						<input type="text" name="movie_title" placeholder="Enter Movie Title" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
-						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
+						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>click <a href="/script/scan.php">here</a> to scan barcode
 					</td>	
 					</div>
 					</tr>	
