@@ -7,6 +7,27 @@ if (empty($_SESSION['user_id'])){
 header("Location: login.php");
 
 }
+if (!empty($_POST['isbn_input'])) {
+
+    $barcode=$_POST['isbn_input'];
+
+
+
+    //set upc api url
+    $url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
+    
+    
+    
+    //call api
+    $json = file_get_contents($url);
+    $json = json_decode($json);
+    
+    $mplaceholder=$json->description;
+    
+
+}
+
+
 $error = false;
 if (isset($_POST['addmovie'])) {
 	$movie_title = mysqli_real_escape_string($conn, $_POST['movie_title']);
@@ -86,8 +107,8 @@ if (isset($_POST['addmovie'])) {
 						<label for="movie_title">Movie Title</label>
 					<t/d>
 					<td>
-						<input type="text" name="movie_title" placeholder="Enter Movie Title" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
-						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>click <a href="/script/scan.php">here</a> to scan barcode
+						<input type="text" name="movie_title" placeholder="<?php echo $mplaceholder; ?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
+						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>click <a href="scan.php">here</a> to scan barcode
 					</td>	
 					</div>
 					</tr>	
