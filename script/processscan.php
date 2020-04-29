@@ -1,9 +1,10 @@
 <?php
 
 // set barcode
-$bar=$_POST['isbn_input'];
+$barcode=$_POST['isbn_input'];
 
 echo $barcode;
+
 //set upc api url
 $url = "https://api.upcdatabase.org/product/'".$barcode."'?apikey=67BDE043D668B6EE5508863B7441C873";
 
