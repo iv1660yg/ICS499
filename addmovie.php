@@ -13,7 +13,7 @@ if (!empty($_POST['isbn_input'])) {
 
 
 
-    //set upc api url
+	//set upc api url
    //$url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
    $url = "https://api.upcitemdb.com/prod/trial/lookup?upc=$barcode";
 
