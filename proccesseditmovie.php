@@ -29,7 +29,7 @@ if (!empty($_GET['id'])) {
      $json_en_id = json_encode($json_array);
 	 $json_de_id  = json_decode($json_en_id);
 
-	foreach ($json_de_id as $mymovies);
+	//foreach ($json_de_id as $mymovies);
 
      $mymovies->moviedb_id;
        
