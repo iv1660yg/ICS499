@@ -34,24 +34,6 @@ if (isset($_POST['editmovie'])) {
 	$imdb_id = mysqli_real_escape_string($conn, $_POST['imdb_id']);
 	$movie_id = mysqli_real_escape_string($conn, $_POST['movie_id']);
 
-/* rebuild error checking later
-	if (empty($movie_title)) {
-		$error = true;
-		$mtitle_error = "can't be empty";
-	}
-	if(empty($releaseyear)) {
-		$error = true;
-		$releaseyear_error = "Please Enter Valid Year";
-	}
-	if(empty($moviedb_id)) {
-		$error = true;
-		$moviedb_id_error = "Password must be minimum of 6 characters";
-	}
-	if(empty($imdb_id)) {
-		$error = true;
-		$imdb_id_error = "Password and Confirm Password doesn't match";
-	}
-	*/
 	if (!$error) {
 
 		//edit movie record
@@ -85,7 +67,7 @@ if (isset($_POST['editmovie'])) {
 
     
     <div class="form">
-	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="addmovieform">
+	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="editmovieform">
 				<fieldset>
 					<legend>Edit Movie</legend>
 
