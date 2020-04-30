@@ -116,7 +116,7 @@ if (isset($_POST['addmovie'])) {
 					<t/d>
 					<td>
 						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($json_de_id->movie_title))?$json_de_id->movie_title:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
-						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>click <a href="scan.php">here</a> to scan barcode
+						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
 					</td>	
 					</div>
 					</tr>	
