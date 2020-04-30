@@ -23,7 +23,6 @@ if (!empty($_GET['id'])) {
 	$edit_imdb_id = $row['imdb_id'];		
 			
 
-
 }
 
 
@@ -106,7 +105,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="movie_title">Movie Title</label>
 					<t/d>
 					<td>
-						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($edit_imdb_id))?$edit_imdb_id:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
+						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($edit_movie_title))?$edit_movie_title:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
 					</td>	
 					</div>
@@ -117,7 +116,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="releaseyear">Release Year</label>
 						</td>
 						<td>	
-						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
+						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="<?php echo (isset($edit_releaseyear))?$edit_releaseyear:'';?>" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
 						</td>
 					</div>
@@ -128,7 +127,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="moviedb_id">Moviedb ID</label>
 						</td>
 						<td>
-						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" value="<?php echo (isset($moviedbid))?$moviedbid:'';?>" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
+						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" value="<?php echo (isset($edit_moviedb_id))?$edit_moviedb_id:'';?>" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($moviedb_id_error)) echo $moviedb_id_error; ?></span>
 						</td>
 					</div>
@@ -139,7 +138,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="imdb_id">IMDB ID</label>
 						</td>
 						<td>
-						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" value="<?php echo (isset($imdbid))?$imdbid:'';?>" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
+						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" value="<?php echo (isset($edit_imdb_id))?$edit_imdb_id:'';?>" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
 						</td>
 					</div>
