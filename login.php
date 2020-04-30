@@ -27,16 +27,27 @@ if (isset($_POST['login'])) {
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+
+
 <div class="login-page">
   <div class="form">
   	<fieldset>
 	<legend>User Login</legend>	
+	<table width=600px style="margin-left:auto;margin-right:auto;">
+	<tr>
     <form class="login-form" role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-      <input type="text" name="email" placeholder="email" required class="form-control" />
+	 <td>
+	  <input type="text" name="email" placeholder="email" required class="form-control" />
       <input type="password" name="password" placeholder="password" required class="form-control" />
-      <button type="submit" name="login">login</button>
+	  <button type="submit" name="login">login</button>
+	</td>
+	<td>
 	  <font align="center" size="3" color="red"><strong><?php echo "<BR>" .$error_message ?></strong></font>
 	  <p >Not registered? <a href="signup.php">Create an account</a></p>
+	</td>
+	  </tr>
+		</table>
 	  </fieldset>
     </form>
   </div>
