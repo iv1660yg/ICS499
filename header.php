@@ -48,15 +48,20 @@ body {
 <div class="topnav">
 <a class="active" href="index.php">Home</a>
 <a class="active" href="mymovies.php">My Movies</a>
+<div>
+<p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+</div>    
 </div>
 
 
+
+
 <!––if no one logged in-->
-<?php } else { ?>   
+<?php } else { ?>  
+<div class="topnav">     
 <a class="active" href="index.php">Home</a>
 <a class="active" href="singup.php">Signup</a>
 <a class="active" href="login.php">Login</a>
-
 <?php } ?>    
 
 </body>
