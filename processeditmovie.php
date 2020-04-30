@@ -12,7 +12,7 @@ if (!empty($_GET['id'])) {
 
     $movie_ID=$_GET['id'];
 
-    $sql2 = "Select FROM movies WHERE movie_id = '".$_GET['id']."' ";
+    $sql2 = "Select * FROM movies WHERE movie_id = '".$_GET['id']."' ";
     
     $result = mysqli_query($conn, $sql2);  
     
