@@ -14,7 +14,7 @@ body {
 }
 
 .topnavinfo {
- text-align: left;
+ text-align: right;
 }
 
 .topnav a {
