@@ -156,7 +156,7 @@ if (isset($_POST['addmovie'])) {
 					<tr> 
 					<div class="form-group">
 					<td>
-						<input type="submit" name="addmovie" value="Add Movie" class="btn btn-primary" />
+						<input type="submit" name="editmovie" value="Edit Movie" class="btn btn-primary" />
 						</td>
 					</div>
 					</tr> 
