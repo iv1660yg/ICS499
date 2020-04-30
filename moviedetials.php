@@ -1,4 +1,7 @@
 <?php
+session_start();
+include('header.php');
+
 
 // set barcode
 if (!empty($_GET['id'])) {
