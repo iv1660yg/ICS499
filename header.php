@@ -14,10 +14,6 @@ body {
   background-color: #333;
 }
 
-.topnavinfo{
-    text-align: left;
-}
-
 
 .topnav a {
   float: left;
