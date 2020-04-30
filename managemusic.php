@@ -18,12 +18,12 @@ header("Location: login.php");
     <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
     
            
-
     <table width=600px style="margin-left:auto;margin-right:auto;">
-    <th colspan=2><img src="img/manageheader-icon.png" /></th>
+    <th colspan=3><img src="img/manageheader-icon.png" /></th>
     <tr>
-    <td><a href="managemovies.php"><img src="img/managemovie-icon.png" /></a></td>
-    <td><a href="managemusic.php"><img src="img/managemusic-icon.png" /></a></td>
+    <td><a href="addmusic.php"><img src="img/add-icon.png" /></a></td>
+    <td><a href="editmusic.php"><img src="img/edit-icon.png" /></a></td>
+    <td><a href="removemusic.php"><img src="img/remove-icon.png" /></a></td>
     </tr>
 
 
