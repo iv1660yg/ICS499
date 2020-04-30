@@ -53,20 +53,21 @@ body {
 <div class="topnav">
 <a class="active" href="index.php">Home</a>
 <a class="active" href="mymovies.php">My Movies</a>
+<<<<<<< HEAD
 <div class="topnavinfo">
 <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 </div>    
+=======
+>>>>>>> parent of ad8243b... update header
 </div>
 
 
-
-
 <!––if no one logged in-->
-<?php } else { ?>  
-<div class="topnav">     
+<?php } else { ?>   
 <a class="active" href="index.php">Home</a>
 <a class="active" href="singup.php">Signup</a>
 <a class="active" href="login.php">Login</a>
+
 <?php } ?>    
 
 </body>
