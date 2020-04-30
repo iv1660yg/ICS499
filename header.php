@@ -8,10 +8,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.topnavinfo{
+    text-align: center;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
+
+
 
 .topnav a {
   float: left;
