@@ -38,26 +38,26 @@ body {
 <?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
 <div class="topnav">
-  <a class="active" href="index.php">Home</a>
-  <a class="active" href="login.php">Login</a>
-  <a class="active" href="signup.php">Signup</a>
+  <a class="active" href="../index.php">Home</a>
+  <a class="active" href="../login.php">Login</a>
+  <a class="active" href="../signup.php">Signup</a>
 </div>
 
 <!––if login user is enduser-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="standard" ) )) { ?>
 
 <div class="topnav">
-  <a class="active" href="index.php">Home</a>
-  <a class="active" href="scan.php">Scan a Movie</a>
-  <a class="active" href="mymovies.php">myMovies</a>
+  <a class="active" href="../index.php">Home</a>
+  <a class="active" href="s../can.php">Scan a Movie</a>
+  <a class="active" href="../mymovies.php">myMovies</a>
 </div>
 
 <!––if no one logged in-->
 <?php } else { ?>
 
 <div class="topnav">
-  <a class="active" href="login.php">Login</a>
-  <a class="active" href="signup.php">Signup</a>
+  <a class="active" href="../login.php">Login</a>
+  <a class="active" href="../signup.php">Signup</a>
 </div>
 
 <?php } ?>
