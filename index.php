@@ -17,11 +17,11 @@ header("Location: login.php");
 </head>
     
     <table width=600px style="margin-left:auto;margin-right:auto;">
-    <th colspan=3><img src="img/menu.png" /></th>
+    <th colspan=2><img src="img/menu.png" /></th>
     <tr>
     <td><img src="img/lib1.png" /></td>
     <td><a href="managemedia.php"><img src="img/mm.png" /></a></td>
-    <td><a href="addmovie.php"><img src="img/add1.png" /></a></td>
+  
 
     </tr>
 
