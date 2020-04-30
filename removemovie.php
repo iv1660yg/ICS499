@@ -64,8 +64,10 @@ mysqli_close($conn);
 
     </center
     
+    <center>
     <P>
     Click <a href="logout.php">here</a> to logout
+    </center>
     
 
 
