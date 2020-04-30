@@ -42,6 +42,8 @@ if (isset($_POST['login'])) {
       <input type="password" name="password" placeholder="password" required class="form-control" />
 	  <button type="submit" name="login">login</button>
 	</td>
+	<tr>
+	</tr>	
 	<td>
 	  <font align="center" size="3" color="red"><strong><?php echo "<BR>" .$error_message ?></strong></font>
 	  <p >Not registered? <a href="signup.php">Create an account</a></p>
