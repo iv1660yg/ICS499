@@ -13,6 +13,10 @@ body {
   background-color: #333;
 }
 
+.topnavinfo {
+ text-align: left;
+}
+
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -43,10 +47,12 @@ body {
   <a class="active" href="../movies/index.php">Manage Movies</a>
   <a class="active" href="3">Manage Music</a>
   <a class="active" href="#">Manage TV Shows</a>
-</div>
-<div>
+
+  <div class="topnavinfo">
   <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
-</div>  
+  </div> 
+</div>
+
 
 
 <!––if login user is enduser-->
@@ -56,10 +62,12 @@ body {
   <a class="active" href="../index.php">Home</a>
   <a class="active" href="../scan.php">Scan a Movie</a>
   <a class="active" href="../mymovies.php">myMovies</a>
-</div>
-<div>
+
+  <div class="topnavinfo">
   <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 </div> 
+</div>
+
 
 <!––if no one logged in-->
 <?php } else { ?>
@@ -67,10 +75,11 @@ body {
 <div class="topnav">
   <a class="active" href="../login.php">Login</a>
   <a class="active" href="../signup.php">Signup</a>
-</div>
-<div>
+  <div class="topnavinfo">
   <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
 </div> 
+</div>
+
 
 <?php } ?>
 
