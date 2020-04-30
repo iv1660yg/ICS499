@@ -41,10 +41,9 @@ if(isset($_SESSION['user_id']) =="") {
                         <tbody>
                             <tr>
                                 <td><input type="text" ng-model="addData.movie_title" class="form-control" placeholder="Enter Movie Title" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.releaseyear" class="form-control" placeholder="Enter Release Year" ng-required="true" /></td>
-                                <td><input type="text" ng-model="addData.moviedb_id" class="form-control" placeholder="Enter MovieDB ID" ng-required="true" /></td>
-
-                                <td><input type="text" ng-model="addData.imdb_id" class="form-control" placeholder="Enter IMDB ID" ng-required="true" /></td>
+                                <td><input type="number" ng-model="addData.releaseyear" class="form-control" placeholder="Enter Release Year" ng-required="true" /></td>
+                                <td><input type="number" ng-model="addData.moviedb_id" class="form-control" placeholder="Enter MovieDB ID" ng-required="true" /></td>
+                                <td><input type="number" ng-model="addData.imdb_id" class="form-control" placeholder="Enter IMDB ID" ng-required="true" /></td>
 
 
                                 <td><button type="submit" class="btn btn-success btn-sm" ng-disabled="testform.$invalid">Add</button></td>
@@ -68,9 +67,9 @@ if(isset($_SESSION['user_id']) =="") {
                 </script>
                 <script type="text/ng-template" id="edit">
                     <td><input type="text" ng-model="formData.movie_title" class="form-control"  /></td>
-                    <td><input type="text" ng-model="formData.releaseyear" class="form-control"  /></td>
-                    <td><input type="text" ng-model="formData.moviedb_id" class="form-control" /></td>
-                    <td><input type="text" ng-model="formData.imdb_id" class="form-control" /></td>
+                    <td><input type="number" ng-model="formData.releaseyear" class="form-control"  /></td>
+                    <td><input type="number" ng-model="formData.moviedb_id" class="form-control" /></td>
+                    <td><input type="number" ng-model="formData.imdb_id" class="form-control" /></td>
                     <td>
                         <input type="hidden" ng-model="formData.data.movie_id" />
                         <button type="button" class="btn btn-info btn-sm" ng-click="editData()">Save</button>
