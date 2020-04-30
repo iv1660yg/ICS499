@@ -28,7 +28,7 @@ if (!empty($_GET['id'])) {
 
 
 $error = false;
-if (isset($_POST['addmovie'])) {
+if (isset($_POST['editmovie'])) {
 	$movie_title = mysqli_real_escape_string($conn, $_POST['movie_title']);
 	$releaseyear = mysqli_real_escape_string($conn, $_POST['releaseyear']);
 	$moviedb_id = mysqli_real_escape_string($conn, $_POST['moviedb_id']);
@@ -54,23 +54,13 @@ if (isset($_POST['addmovie'])) {
 	*/
 	if (!$error) {
 
-		//intsert movie record
-		if(mysqli_query($conn, "INSERT INTO movies(movie_title, releaseyear,  moviedb_id, imdb_id) VALUES('" . $movie_title . "','" . $releaseyear . "','" . $moviedb_id . "', '" . $imdb_id . "')")) {
+		//edit movie record
+		if(mysqli_query($conn, "UPDATE movies SET movie_title = '" . $movie_title . "', releaseyear = '" . $releaseyear . "', moviedb_id = '" . $moviedb_id . "', imdb_id = '" . $imdb_id_id . "' WHERE movie_id = '" .$edit_movie_id. "' ")) {
 
-			//select movie titles that equal submitted movie title 
-			$result = mysqli_query ($conn,"SELECT * from movies where movie_title = '" . $movie_title . "' ");
 
-			//set var movie_id = movie_id from sql search 
-			while ($row = mysqli_fetch_array($result)) {
-				$movie_id = $row['movie_id'];
-			  }
-
-			//add movie to users personal little   
-			mysqli_query($conn,"INSERT INTO user_movie(user_id, movie_id) VALUES('" . $_SESSION['user_id'] . "','" . $movie_id . "')");
-		
 			//redirect to index page
-			header("Location:index.php");
-			exit();
+			header("Location:managemovies.php");
+
 
 		} else {
 			$error_message = "Error in adding move...Please try again later!";
