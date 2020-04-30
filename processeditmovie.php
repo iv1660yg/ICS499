@@ -55,7 +55,7 @@ if (isset($_POST['editmovie'])) {
 	if (!$error) {
 
 		//edit movie record
-		if(mysqli_query($conn, "UPDATE movies SET movie_title = '" . $movie_title . "', releaseyear = '" . $releaseyear . "', moviedb_id = '" . $moviedb_id . "', imdb_id = '" . $imdb_id_id . "' WHERE movie_id = '" .$edit_movie_id. "' ")) {
+		if(mysqli_query($conn, "UPDATE movies SET movie_title = '" . $movie_title . "', releaseyear = '" . $releaseyear . "', moviedb_id = '" . $moviedb_id . "', imdb_id = '" . $imdb_id . "' WHERE movie_id = '" .$edit_movie_id. "' ")) {
 
 
 			//redirect to index page
