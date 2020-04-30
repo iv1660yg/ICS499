@@ -15,7 +15,6 @@ header("Location: login.php");
 <head>
   <link rel="stylesheet" href="css/style.css">
 </head>
-    <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
     
            
 
