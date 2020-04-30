@@ -7,36 +7,44 @@ if (empty($_SESSION['user_id'])){
 header("Location: login.php");
 
 }
+if (!empty($_POST['isbn_input'])) {
 
-if (!empty($_GET['id'])) {
+    $barcode=$_POST['isbn_input'];
 
-    $movie_ID=$_GET['id'];
 
-    $sql2 = "Select FROM movies WHERE movie_id = '".$_GET['id']."' ";
+
+	//set upc api url
+   //$url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
+   $url = "https://api.upcitemdb.com/prod/trial/lookup?upc=$barcode";
+
     
-    $result = mysqli_query($conn, $sql2);  
     
+    
+    //call api
+    $json = file_get_contents($url);
+    $json = json_decode($json);
+    
+	//$scantitle=$json->title;
+	$scantitle = $json->items[0]->title;
+	$scantitle =  trim($scantitle);
 
-	
-     //fill array
-     while($row = mysqli_fetch_assoc($result))  
-     {  
-          $json_array[] = array("movie_id" => $row['movie_id'], "movie_title" => $row['movie_title'],"releaseyear"=>$row['releaseyear'],"moviedb_id"=>$row['moviedb_id'],"imdb_id"=>$row['imdb_id']);
-     } 
+	//getmoviedb
+	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=".rawurlencode($scantitle);
+    $jsondb = file_get_contents($movidburl);
+	$jsondb = json_decode($jsondb);
+	$moviedbid = $jsondb->results[0]->id;
+
+	$imdburl = "https://api.themoviedb.org/3/movie/".$moviedbid."?api_key=5a846dc3f5db35f3d5590b415612624c";
+	$jsonimdb = file_get_contents($imdburl);
+	$jsonimdb = json_decode($jsonimdb);
+	$imdbid = $jsondb->imdb_id;
+	echo $imdbid;
 
 
-     //convert array to json
-     $json_en_id = json_encode($json_array);
-	 $json_de_id  = json_decode($json_en_id);
 
-	//foreach ($json_de_id as $mymovies);
-
-     $mymovies->moviedb_id;
-       
-
+    
 
 }
-
 
 
 $error = false;
@@ -46,6 +54,24 @@ if (isset($_POST['addmovie'])) {
 	$moviedb_id = mysqli_real_escape_string($conn, $_POST['moviedb_id']);
 	$imdb_id = mysqli_real_escape_string($conn, $_POST['imdb_id']);
 
+/* rebuild error checking later
+	if (empty($movie_title)) {
+		$error = true;
+		$mtitle_error = "can't be empty";
+	}
+	if(empty($releaseyear)) {
+		$error = true;
+		$releaseyear_error = "Please Enter Valid Year";
+	}
+	if(empty($moviedb_id)) {
+		$error = true;
+		$moviedb_id_error = "Password must be minimum of 6 characters";
+	}
+	if(empty($imdb_id)) {
+		$error = true;
+		$imdb_id_error = "Password and Confirm Password doesn't match";
+	}
+	*/
 	if (!$error) {
 
 		//intsert movie record
@@ -111,7 +137,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="releaseyear">Release Year</label>
 						</td>
 						<td>	
-						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="<?php echo (isset($mymovies->releaseyear))?$mymovies->releaseyear:'';?>"required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
+						<input input type="number" name="releaseyear" min="1900" max="2099" step="1" value="2020" required value="<?php if($error) echo $releaseyear; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($releaseyear_error)) echo $releaseyear_error; ?></span>
 						</td>
 					</div>
@@ -122,7 +148,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="moviedb_id">Moviedb ID</label>
 						</td>
 						<td>
-						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" value="<?php echo (isset($mymovies->moviedb_id))?$mymovies->moviedb_id:'';?>" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
+						<input type="text" name="moviedb_id" placeholder="Enter Moviedb ID" value="<?php echo (isset($moviedbid))?$moviedbid:'';?>" required value="<?php if($error) echo $moviedb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($moviedb_id_error)) echo $moviedb_id_error; ?></span>
 						</td>
 					</div>
@@ -133,7 +159,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="imdb_id">IMDB ID</label>
 						</td>
 						<td>
-						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" value="<?php echo (isset($mymovies->imdb_id))?$mymovies->imdb_id:'';?>" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
+						<input type="text" name="imdb_id" placeholder="Enter IMDB ID" value="<?php echo (isset($imdbid))?$imdbid:'';?>" required value="<?php if($error) echo $imdb_id; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($imdb_id_error)) echo $imdb_id_error; ?></span>
 						</td>
 					</div>
@@ -141,7 +167,7 @@ if (isset($_POST['addmovie'])) {
 					<tr> 
 					<div class="form-group">
 					<td>
-						<input type="submit" name="update" value="update" class="btn btn-primary" />
+						<input type="submit" name="addmovie" value="Add Movie" class="btn btn-primary" />
 						</td>
 					</div>
 					</tr> 
