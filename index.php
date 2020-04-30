@@ -19,7 +19,7 @@ header("Location: login.php");
     <table width=600px style="margin-left:auto;margin-right:auto;">
     <th colspan=2><img src="img/menu.png" /></th>
     <tr>
-    <td><a href="viewlibrary.php"><img src="img/lib1.png" /></a>/<td>
+    <td><a href="viewlibrary.php"><img src="img/lib1.png" /></a></td>
     <td><a href="managemedia.php"><img src="img/mm.png" /></a></td>
   
 
