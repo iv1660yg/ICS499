@@ -8,6 +8,33 @@ header("Location: login.php");
 
 }
 
+if (!empty($_GET['id'])) {
+
+    $movie_ID=$_GET['id'];
+
+    $sql2 = "Select FROM movies WHERE movie_id = '".$_GET['id']."' ";
+    
+    $result = mysqli_query($conn, $sql2);  
+    
+
+	    //create array
+		$json_array = array();  
+    
+		//fill array
+		while($row = mysqli_fetch_assoc($result))  
+		{  
+			 $json_array[] = array("movie_id" => $row['movie_id'], "movie_title" => $row['movie_title'],"releaseyear"=>$row['releaseyear'],"moviedb_id"=>$row['moviedb_id'],"imdb_id"=>$row['imdb_id']);
+		} 
+   
+   
+		//convert array to json
+		$json_en_id = json_encode($json_array);
+		$json_de_id  = json_decode($json_en_id);
+   
+   print_r($json_en_id);
+
+}
+
 
 
 $error = false;
