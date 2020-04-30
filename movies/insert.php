@@ -12,7 +12,7 @@ $data = array(
     ':movie_title'  => $form_data->movie_title,
     ':releaseyear'  => $form_data->releaseyear,
     ':moviedb_id'  => $form_data->moviedb_id,
-    ':imdb_id'  => $form_data->imdb_id,  
+    ':imdb_id'  => $form_data->imdb_id  
 );
 
 $query = "
