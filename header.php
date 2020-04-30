@@ -34,16 +34,30 @@ body {
 </style>
 </head>
 <body>
+<!––if login user is admin-->
+<?php if ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="admin" ) )) { ?>
 
 <div class="topnav">
-  <a class="active" href="search.php">Search</a>
-  <a class="active" href="movies.php">Home</a>
-  <a class="active" href="rental.php">Single Rental</a>
-  <a class="active" href="multi-rental.php">Multiple Rental</a>
-  <a class="active" href="review.php">Reviews</a>
+<a class="active" href="index.php">Home</a>
+<a class="active" href="index.php">User Admin</a>
 </div>
 
+<!––if login user is tech-->
+<?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="standard" ) )) { ?>
 
+<div class="topnav">
+<a class="active" href="index.php">Home</a>
+<a class="active" href="mymovies.php">My Movies</a>
+
+</div>
+
+<!––if no one logged in-->
+<?php } else { ?>   
+<a class="active" href="index.php">Home</a>
+<a class="active" href="singup.php">Signup</a>
+<a class="active" href="login.php">Login</a>
+
+<?php } ?>    
 
 </body>
 </html>
