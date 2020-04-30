@@ -6,7 +6,7 @@ include_once("db_connect.php");
 if (empty($_SESSION['user_id'])){
 header("Location: login.php");
 
-
+}
 
 if (!empty($_GET['id'])) {
 
@@ -158,4 +158,4 @@ if (isset($_POST['addmovie'])) {
 
     
 
- <?php }} ?>
+ <?php } ?>
