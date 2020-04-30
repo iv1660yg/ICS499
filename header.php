@@ -75,9 +75,6 @@ body {
 <div class="topnav">
   <a class="active" href="../login.php">Login</a>
   <a class="active" href="../signup.php">Signup</a>
-  <div class="topnavinfo">
-  <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
-</div> 
 </div>
 
 
