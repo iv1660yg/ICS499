@@ -39,8 +39,10 @@ body {
 
 <div class="topnav">
   <a class="active" href="../index.php">Home</a>
-  <a class="active" href="../login.php">Login</a>
-  <a class="active" href="../signup.php">Signup</a>
+  <a class="active" href="../users/index.php">Manage Users</a>
+  <a class="active" href="../movies/index.php">Manage Movies</a>
+  <a class="active" href="3">Manage Music</a>
+  <a class="active" href="#">Manage TV Shows</a>
 </div>
 <div>
   <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>

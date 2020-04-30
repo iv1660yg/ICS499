@@ -20,10 +20,11 @@ header("Location: login.php");
            
 
     <table width=600px style="margin-left:auto;margin-right:auto;">
-    <th colspan=2><img src="img/manageheader-icon.png" /></th>
+    <th colspan=3><img src="img/manageheader-icon.png" /></th>
     <tr>
-    <td><a href="managemovies.php"><img src="img/managemovie-icon.png" /></a></td>
-    <td><a href="managemusic.php"><img src="img/managemusic-icon.png" /></a></td>
+    <td><a href="addmovie.php"><img src="img/add-icon.png" /></a></td>
+    <td><a href="editmovie.php"><img src="img/edit-icon.png" /></a></td>
+    <td><a href="removemovie.php"><img src="img/remove-icon.png" /></a></td>
     </tr>
 
 
