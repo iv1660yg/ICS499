@@ -158,4 +158,4 @@ if (isset($_POST['addmovie'])) {
 
     
 
- <?php } ?>
+ <?php }} ?>
