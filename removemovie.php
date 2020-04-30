@@ -47,7 +47,7 @@ mysqli_close($conn);
 <table>
 	<tbody>
     <tr>
-      <th colspan="3"><h1>My Movies</h1></th>
+      <th colspan="3"><h1>My Movies - Removal</h1></th>
     </tr>
 		<tr>
 			<th>Movie Title</th>
@@ -55,7 +55,7 @@ mysqli_close($conn);
 		</tr>
 		<?php foreach ($json_de_id as $mymovies) : ?>
         <tr>
-            <td> <a href=processdeletemovie.php?id=<?php echo $mymovies->movie_id; ?>><?php echo $mymovies->movie_title; ?></a> </td>
+            <td> <a href=processdeletemovie.php?id=<?php echo $mymovies->movie_id; ?> onclick="return confirm('Are you sure?')"><?php echo $mymovies->movie_title; ?></a> </td>
             <td> <?php echo $mymovies->releaseyear; ?> </td>
         </tr>
 		<?php endforeach; ?>
