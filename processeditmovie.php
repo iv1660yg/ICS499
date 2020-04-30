@@ -7,44 +7,7 @@ if (empty($_SESSION['user_id'])){
 header("Location: login.php");
 
 }
-if (!empty($_POST['isbn_input'])) {
 
-    $barcode=$_POST['isbn_input'];
-
-
-
-	//set upc api url
-   //$url = "http://api.upcdatabase.org/product/".$barcode."?apikey=67BDE043D668B6EE5508863B7441C873";
-   $url = "https://api.upcitemdb.com/prod/trial/lookup?upc=$barcode";
-
-    
-    
-    
-    //call api
-    $json = file_get_contents($url);
-    $json = json_decode($json);
-    
-	//$scantitle=$json->title;
-	$scantitle = $json->items[0]->title;
-	$scantitle =  trim($scantitle);
-
-	//getmoviedb
-	$movidburl = "https://api.themoviedb.org/3/search/movie?api_key=5a846dc3f5db35f3d5590b415612624c&query=".rawurlencode($scantitle);
-    $jsondb = file_get_contents($movidburl);
-	$jsondb = json_decode($jsondb);
-	$moviedbid = $jsondb->results[0]->id;
-
-	$imdburl = "https://api.themoviedb.org/3/movie/".$moviedbid."?api_key=5a846dc3f5db35f3d5590b415612624c";
-	$jsonimdb = file_get_contents($imdburl);
-	$jsonimdb = json_decode($jsonimdb);
-	$imdbid = $jsondb->imdb_id;
-	echo $imdbid;
-
-
-
-    
-
-}
 
 
 $error = false;
@@ -117,7 +80,7 @@ if (isset($_POST['addmovie'])) {
     <div class="form">
 	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="addmovieform">
 				<fieldset>
-					<legend>Add Movie</legend>
+					<legend>Edit Movie</legend>
 
 					<table>
 					<tr> 
