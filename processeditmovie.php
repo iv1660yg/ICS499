@@ -8,6 +8,23 @@ header("Location: login.php");
 
 }
 
+if (!empty($_GET['id'])) {
+
+	$movie_ID=$_GET['id'];
+
+	$sql2 = "Select * FROM movies WHERE movie_id = '".$_GET['id']."' ";
+	
+	$result = mysqli_query($conn, $sql2);  
+	$row = mysqli_fetch_array($result);
+	$edit_movie_id = $row['movie_id'];
+	$edit_movie_title = $row['movie_title'];	
+	$edit_releaseyear = $row['releaseyear'];
+	$edit_moviedb_id = $row['moviedb_id'];
+	$edit_imdb_id = $row['imdb_id'];		
+
+}
+
+
 
 
 if (isset($_POST['editmovie'])) {
@@ -51,23 +68,7 @@ if (isset($_POST['editmovie'])) {
 
 	}
 
-	if (!empty($_GET['id'])) {
 
-		$movie_ID=$_GET['id'];
-	
-		$sql2 = "Select * FROM movies WHERE movie_id = '".$_GET['id']."' ";
-		
-		$result = mysqli_query($conn, $sql2);  
-		$row = mysqli_fetch_array($result);
-		$edit_movie_id = $row['movie_id'];
-		$edit_movie_title = $row['movie_title'];	
-		$edit_releaseyear = $row['releaseyear'];
-		$edit_moviedb_id = $row['moviedb_id'];
-		$edit_imdb_id = $row['imdb_id'];		
-	
-	}
-	
-	
 	
 }
 
