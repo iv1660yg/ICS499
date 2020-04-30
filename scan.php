@@ -43,7 +43,7 @@ header("Location: login.php");
   </head>
   <body>
 
-
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="https://serratus.github.io/quaggaJS/stylesheets/prism.css" />
 <section id="container" class="container">
     <h3>Scan barcode to input-field</h3>
