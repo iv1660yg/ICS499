@@ -15,23 +15,14 @@ if (!empty($_GET['id'])) {
     $sql2 = "Select * FROM movies WHERE movie_id = '".$_GET['id']."' ";
     
     $result = mysqli_query($conn, $sql2);  
-    
+    $row = mysqli_fetch_array($result);
+	$edit_movie_id = $row['movie_id'];
+	$edit_movie_title = $row['movie_title'];	
+	$edit_releaseyear = $row['releaseyear'];
+	$edit_moviedb_id = $row['moviedb_id'];
+	$edit_imdb_id = $row['imdb_id'];		
+			
 
-	    //create array
-		$json_array = array();  
-    
-		//fill array
-		while($row = mysqli_fetch_assoc($result))  
-		{  
-			 $json_array[] = array("movie_id" => $row['movie_id'], "movie_title" => $row['movie_title'],"releaseyear"=>$row['releaseyear'],"moviedb_id"=>$row['moviedb_id'],"imdb_id"=>$row['imdb_id']);
-		} 
-   
-   
-		//convert array to json
-		$json_en_id = json_encode($json_array);
-		$json_de_id  = json_decode($json_en_id);
-   
-   print_r($json_de_id);
 
 }
 
@@ -115,7 +106,7 @@ if (isset($_POST['addmovie'])) {
 						<label for="movie_title">Movie Title</label>
 					<t/d>
 					<td>
-						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($json_de_id->movie_title))?$json_de_id->movie_title:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
+						<input type="text" name="movie_title" placeholder="Movie Title" value="<?php echo (isset($edit_imdb_id))?$edit_imdb_id:'';?>" required value="<?php if($error) echo $movie_title; ?>" class="form-control" />
 						<span class="text-danger"><?php if (isset($mtitle_error)) echo $mtitle_error; ?></span>
 					</td>	
 					</div>
