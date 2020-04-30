@@ -7,8 +7,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.topnavinfo {
- algin-text: left;
 
 }
 
@@ -53,12 +51,6 @@ body {
 <div class="topnav">
 <a class="active" href="index.php">Home</a>
 <a class="active" href="mymovies.php">My Movies</a>
-<<<<<<< HEAD
-<div class="topnavinfo">
-<p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
-</div>    
-=======
->>>>>>> parent of ad8243b... update header
 </div>
 
 
