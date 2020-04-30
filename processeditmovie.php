@@ -31,7 +31,7 @@ if (!empty($_GET['id'])) {
 		$json_en_id = json_encode($json_array);
 		$json_de_id  = json_decode($json_en_id);
    
-   print_r($json_en_id);
+   print_r($json_de_id);
 
 }
 
