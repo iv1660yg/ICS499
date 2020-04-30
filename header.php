@@ -48,8 +48,8 @@ body {
 <div class="topnav">
 <a class="active" href="index.php">Home</a>
 <a class="active" href="mymovies.php">My Movies</a>
-
 </div>
+
 
 <!––if no one logged in-->
 <?php } else { ?>   
