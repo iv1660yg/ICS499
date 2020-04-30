@@ -8,10 +8,11 @@ font-size: 14pt;
 font-weight: bold;
 }
 
-a:link {
+a:link, a:visited, a:active {
 color: blue;
 text-decoration: none;
 }
+
 
 a:hover {
 text-decoration: underline;
