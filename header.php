@@ -42,6 +42,10 @@ body {
   <a class="active" href="../login.php">Login</a>
   <a class="active" href="../signup.php">Signup</a>
 </div>
+<div>
+  <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+</div>  
+
 
 <!––if login user is enduser-->
 <?php } elseif ((isset($_SESSION['user_id']) AND (($_SESSION['userType'])=="standard" ) )) { ?>
@@ -51,6 +55,9 @@ body {
   <a class="active" href="../scan.php">Scan a Movie</a>
   <a class="active" href="../mymovies.php">myMovies</a>
 </div>
+<div>
+  <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+</div> 
 
 <!––if no one logged in-->
 <?php } else { ?>
@@ -59,6 +66,9 @@ body {
   <a class="active" href="../login.php">Login</a>
   <a class="active" href="../signup.php">Signup</a>
 </div>
+<div>
+  <p><strong>Welcome!</strong> You are logged in as <strong><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></strong></p>
+</div> 
 
 <?php } ?>
 
