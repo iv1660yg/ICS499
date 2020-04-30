@@ -31,7 +31,7 @@ if (!empty($_GET['id'])) {
 		$json_en_id = json_encode($json_array);
 		$json_de_id  = json_decode($json_en_id);
    
-   print_r($json_en_id);
+   print_r($json_de_id);
 
 }
 
@@ -156,7 +156,7 @@ if (isset($_POST['addmovie'])) {
 					<tr> 
 					<div class="form-group">
 					<td>
-						<input type="submit" name="addmovie" value="Add Movie" class="btn btn-primary" />
+						<input type="submit" name="editmovie" value="Edit Movie" class="btn btn-primary" />
 						</td>
 					</div>
 					</tr> 
