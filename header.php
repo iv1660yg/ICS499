@@ -48,7 +48,7 @@ body {
 
 <div class="topnav">
   <a class="active" href="../index.php">Home</a>
-  <a class="active" href="s../can.php">Scan a Movie</a>
+  <a class="active" href="../scan.php">Scan a Movie</a>
   <a class="active" href="../mymovies.php">myMovies</a>
 </div>
 
